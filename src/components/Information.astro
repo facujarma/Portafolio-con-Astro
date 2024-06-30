@@ -9,10 +9,12 @@ interface Props {
 const { title, label } = Astro.props;
 ---
 
-<article class="max-w-[80em] w-2/3 m-auto flex flex-col lg:flex-row gap-12 sm:gap-24 lg:gap-36 2xl:gap-64">
+<article
+  class="max-w-[80em] w-2/3 m-auto flex flex-col lg:flex-row gap-12 sm:gap-24 lg:gap-36 2xl:gap-64"
+>
   <header class="flex items-center gap-2 h-[24px]">
     <Icon url="info" class="max-w-[24px] max-h-[24px]" />
-    <h3
+    <h2
       style="
         background: linear-gradient(90deg, #8C98B7 2.07%, #A38CAE 20.26%, #724E83 35.14%);
         background-clip: text;
@@ -21,12 +23,14 @@ const { title, label } = Astro.props;
       class="text-3xl 2xl:text-4xl font-bold w-36 2xl:w-48"
     >
       {title}
-    </h3>
+    </h2>
   </header>
   <section>
-    <span class="block text-2xl 2xl:text-[32px] font-bold text-[#A38CAE] mb-4 sm:mb-12"
-      >{label}</span
+    <h3
+      class="block text-2xl 2xl:text-[32px] font-bold text-[#A38CAE] mb-4 sm:mb-12"
     >
+      {label}
+    </h3>
     <div class="flex flex-col gap-4 text-base 2xl:text-2xl flex-1">
       <slot />
     </div>

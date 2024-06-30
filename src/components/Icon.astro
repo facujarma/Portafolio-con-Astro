@@ -7,4 +7,8 @@ interface Props {
 const { class: className, url } = Astro.props;
 ---
 
-<img src={"src/icons/" + url + ".svg"} class={className} />
+<img
+  src={"src/icons/" + url + ".svg"}
+  alt={"Icono de " + url}
+  class={className}
+/>

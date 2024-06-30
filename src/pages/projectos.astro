@@ -10,7 +10,9 @@ import CardProject from "../components/CardProject.astro";
     title="Proyectos"
     description="Aqui podras un poco del trabajo que he realizado estos años."
   />
-  <article class="min-w-[30em] max-w-[80em] w-2/3 flex flex-col gap-24 my-36 mx-auto">
+  <article
+    class="min-w-[30em] max-w-[80em] w-2/3 flex flex-col gap-24 my-36 mx-auto"
+  >
     <CardProject
       year={2024}
       name="FCalendar"
@@ -25,7 +27,6 @@ import CardProject from "../components/CardProject.astro";
       url="examly-ai.web.app"
       technologies={["Figma", "React", "Firebase", "Javascript"]}
       imageUrl="src/assets/examlyAi.png"
-
     />
     <CardProject
       year={2022}
@@ -33,7 +34,6 @@ import CardProject from "../components/CardProject.astro";
       description="Una pagina web en donde aprender un poco mas de astronomia"
       url="f-calendar.vercel.app"
       technologies={["Figma", "React", "Firebase", "Javascript"]}
-
     />
   </article>
 </Layout>
