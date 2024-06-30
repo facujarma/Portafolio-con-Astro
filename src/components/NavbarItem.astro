@@ -1,0 +1,21 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  actualPage: boolean;
+}
+
+const { href, title, actualPage } = Astro.props;
+---
+
+<li
+  class:list={[
+    "flex justify-center items-center w-36 2xl:w-48 h-6 2xl:h-10 rounded-lg duration-100 text-md 2xl:text-xl",
+    {
+      "bg-[#373B49] font-bold": actualPage,
+      "hover:bg-[#373B49]": !actualPage,
+    },
+  ]}
+>
+  <a href={href}> {title} </a>
+</li>

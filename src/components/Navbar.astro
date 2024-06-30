@@ -1,0 +1,22 @@
+---
+import NavbarItem from "./NavbarItem.astro";
+const path = Astro.url.pathname;
+---
+
+<nav class="max-w-[80em] w-3/4 m-auto hidden md:block">
+  <ul
+    class="flex justify-evenly items-center w-full h-10 2xl:h-16 bg-[#1D1E28]/[.30] border border-[#494949] rounded-full"
+  >
+    <NavbarItem
+      href="/projectos"
+      title="Projectos"
+      actualPage={path === "/projectos"}
+    />
+    <NavbarItem href="/" title="Inicio" actualPage={path === "/"} />
+    <NavbarItem
+      href="/certificados"
+      title="Certificados"
+      actualPage={path === "/certificados"}
+    />
+  </ul>
+</nav>

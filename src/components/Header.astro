@@ -1,0 +1,49 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  description: string;
+}
+
+const { title, description, label } = Astro.props;
+---
+
+<header
+  class="relative w-full px-12 max-w-[80em] min-h-[40em] h-screen 2xl:h-[70em] flex flex-col max-h-[90em] items-center justify-center m-auto"
+>
+  <div
+    class="absolute sm:w-[98%] aspect-square top-[30%] sm:top-0 lg:-top-[30%] -z-10"
+    style="background: radial-gradient(50% 50% at 50% 50%, #514258 0%, rgba(81, 66, 88, 0.00) 100%);"
+  >
+  </div>
+
+  <span class="block text-md sm:text-xl text-center">{label}</span>
+  <h1 class="text-6xl sm:text-8xl font-bold text-center">{title}</h1>
+
+  <p
+    class="max-w-md mx-auto mt-2 text-lg sm:text-2xl italic text-center text-[#9B959E]"
+  >
+    {description}
+  </p>
+
+  <a
+    href="#contacto"
+    class="flex justify-center items-center px-10 py-2 mt-12 bg-[#302C3B] border border-[#494949] rounded-full text-[#9B959E] text-base 2xl:text-xl"
+  >
+    Ponte en Contacto
+  </a>
+</header>
+
+<style>
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  div {
+    animation: fadeInDown 2s ease;
+  }
+</style>

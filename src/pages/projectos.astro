@@ -1,0 +1,46 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import CardProject from "../components/CardProject.astro";
+---
+
+<Layout title="Inicio">
+  <Header
+    label="Bienvenido a mis"
+    title="Proyectos"
+    description="Aqui podras un poco del trabajo que he realizado estos años."
+  />
+  <article class="min-w-[30em] max-w-[80em] w-2/3 flex flex-col gap-24 my-36 mx-auto">
+    <CardProject
+      year={2024}
+      name="FCalendar"
+      description="Un calendario enfocado para los estudiantes"
+      url="f-calendar.vercel.app"
+      technologies={["Figma", "React", "Firebase", "Javascript"]}
+      client:load
+    />
+    <CardProject
+      year={2023}
+      name="Examly AI"
+      description="Una pagina web que genera preguntas usando la API de chatGPT"
+      url="examly-ai.web.app"
+      technologies={["Figma", "React", "Firebase", "Javascript"]}
+      imageUrl="src/assets/examlyAi.png"
+      client:load
+    />
+    <CardProject
+      year={2022}
+      name="El sistema solar"
+      description="Una pagina web en donde aprender un poco mas de astronomia"
+      url="f-calendar.vercel.app"
+      technologies={["Figma", "React", "Firebase", "Javascript"]}
+      client:load
+    />
+  </article>
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

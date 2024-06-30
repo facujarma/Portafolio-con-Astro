@@ -1,0 +1,24 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  document: string;
+}
+
+const { document } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center justify-between w-[18.5em] h-64 p-6 text-center bg-[#1D1E28] border border-[#494949] rounded-lg text-xl font-bold"
+>
+  <h3>
+    <slot />
+  </h3>
+  <a
+    href={document}
+    class="w-48 flex items-center justify-center gap-2 bg-[#D9D9D9] rounded-md py-2 text-lg font-bold text-[#494949]"
+  >
+    <Icon url="descargar" class='w-[24px] h-[24px]' />
+    Descargar
+  </a>
+</div>

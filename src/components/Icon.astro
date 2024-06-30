@@ -1,0 +1,10 @@
+---
+interface Props {
+  class: string;
+  url: string;
+}
+
+const { class: className, url } = Astro.props;
+---
+
+<img src={"src/icons/" + url + ".svg"} class={className} />

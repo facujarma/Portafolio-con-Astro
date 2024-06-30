@@ -1,0 +1,99 @@
+---
+import Header from "../components/Header.astro";
+import Icon from "../components/Icon.astro";
+import Information from "../components/Information.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Inicio">
+  <Header
+    label="Hola, yo soy"
+    title="Facundo Jarma"
+    description="Soy un programador Fullstack que disfruta mucho de pasar tiempo desarrollando aplicaciones web y mobile"
+  />
+
+  <main class="mb-[30em]">
+    <Information title="Sobre mi" label="Mi camino en el aprendizaje">
+      <p>
+        Es difícil hablar sobre uno mismo pero creo que hay ciertos casos donde
+        es necesario hacerlo. Hola, yo soy Facundo, y soy un apasionado por el
+        desarrollo de aplicaciones web. Si bien es cierto que soy joven (tengo
+        15 años) llevo tanto tiempo en el mundo de la programación que ya ni
+        recuerdo cuando empecé.
+      </p>
+      <p>
+        Desde temprano le tome mucho amor a aprender y a conocer nuevas
+        tecnologías, empecé con lo básico (HTML, CSS, JS) y hoy en dia, ya
+        conozco tecnologías mas complejas (React, Astro). dAl comienzo amaba
+        diseñar y pasar esos diseños a código, luego le tome mas amor a la
+        lógica que al diseño: aprendo lenguajes como C++ e inicie mi mundo en la
+        programación competitiva.
+      </p>
+      <p>
+        Para el futuro anhelo aprender lo que me falta por conocer y seguir
+        manteniendo mi voluntad por aprender y conocer cosas nuevas, como vengo
+        haciendo todo este tiempo.
+      </p>
+    </Information>
+
+    <section class="relative my-36 mb-80">
+      <h3 class="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-center px-8">
+        Mi <span class="text-[#A38CAE]">entorno</span> de <span
+          class="text-[#8C98B7]">trabajo</span
+        >
+      </h3>
+      <ul
+        class="absolute left-0 top-32 w-[98.9vw] px-12 py-24 flex flex-wrap sm:flex-nowrap justify-center gap-4 items-center bg-[#15181F] border-y border-[#494949] sm:overflow-hidden"
+      >
+        <li>
+          <Icon
+            url="Logos/Typescript"
+            class="w-[3em] aspect-square xl:w-[75px] xl:h-[75px] 2xl:w-[100px] 2xl:h-[100px]"
+          />
+        </li>
+        <li>
+          <Icon
+            url="Logos/Firebase"
+            class="w-[3em] aspect-square xl:w-[75px] xl:h-[75px] 2xl:w-[100px] 2xl:h-[100px]"
+          />
+        </li>
+        <li>
+          <Icon
+            url="Logos/Tailwind"
+            class="w-[3em] aspect-square xl:w-[75px] xl:h-[75px] 2xl:w-[100px] 2xl:h-[100px]"
+          />
+        </li>
+        <li>
+          <Icon
+            url="Logos/Figma"
+            class="w-[3em] aspect-square xl:w-[75px] xl:h-[75px] 2xl:w-[100px] 2xl:h-[100px]"
+          />
+        </li>
+        <li>
+          <Icon
+            url="Logos/Node-js"
+            class="w-[3em] aspect-square xl:w-[75px] xl:h-[75px] 2xl:w-[100px] 2xl:h-[100px]"
+          />
+        </li>
+        <li>
+          <Icon
+            url="Logos/Javascript"
+            class="w-[3em] aspect-square xl:w-[75px] xl:h-[75px] 2xl:w-[100px] 2xl:h-[100px]"
+          />
+        </li>
+        <li>
+          <Icon
+            url="Logos/React"
+            class="w-[3em] aspect-square xl:w-[75px] xl:h-[75px] 2xl:w-[100px] 2xl:h-[100px]"
+          />
+        </li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

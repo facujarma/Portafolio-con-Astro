@@ -1,0 +1,44 @@
+---
+import CertificateCard from "../components/CertificateCard.astro";
+import Header from "../components/Header.astro";
+import Information from "../components/Information.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Certificados">
+  <Header
+    label="Bienvenido a mis"
+    title="Certificados"
+    description="En esta sección se encuentra mi participación, logros e historia en la Olimpiada Informática Argentina"
+  />
+
+  <Information title="La OIA" label="Olimpiada Informatica Argentina">
+    <p>
+      La OIA es la olimpiada informática que tiene validez en argentina, pose
+      diversas categorías, yo participo en la de programación. El 2023 fue un
+      año que lo dedique a esto, a pasar por la olimpiada y ganar mas
+      experiencia en competiciones. Aquí están algunos de mis logros:
+    </p>
+  </Information>
+
+  <section class="max-w-[80em] w-2/3 flex flex-wrap justify-center gap-12 mx-auto mt-24 mb-36">
+    <CertificateCard
+      document="https://drive.google.com/file/d/1z99Uz37DXcYq7a8Y8JOTppwZbJMGiZuh/view?usp=sharing"
+    >
+      <span class="text-[#B6B78C]">Medalla de Oro</span> en el Nacional de la Olimpiada
+      Informática Argentina 2023
+    </CertificateCard>
+    <CertificateCard
+      document="https://drive.google.com/file/d/1dQp9n8YpZ8ZCn9fKc5o7u7jHnW-8VbNn/view?usp=sharing"
+    >
+      <span class="text-[#A38CAE]">Participación</span> en el certamen de seleccion
+      Argentino para la <span class="text-[#8C98B7]">OII</span>
+    </CertificateCard>
+  </section>
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

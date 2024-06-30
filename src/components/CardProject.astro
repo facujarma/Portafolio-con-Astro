@@ -1,0 +1,51 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  technologies: string[];
+  year: number;
+  imageUrl?: string;
+}
+
+const { name, description, url, year, technologies, imageUrl } = Astro.props;
+---
+
+<section
+  class="relative flex flex-col min-w-[30em] max-w-[50em] w-4/5 h-96 mx-auto p-5 bg-[#1D1E28] border border-[#494949] rounded-lg"
+>
+  <header class="h-24">
+    <div class="flex gap-1 items-center">
+      <span class="text-[#8C98B7] font-bold text-3xl">#</span>
+      <h3 class="text-3xl font-bold">{name}</h3>
+      <span
+        class="w-12 h-5 bg-[#8C98B7] rounded-full text-center text-sm ml-2 mt-1 font-bold"
+      >
+        {year}
+      </span>
+    </div>
+    <p class="text-md max-w-xs">{description}</p>
+  </header>
+  <main class="relative flex-grow">
+    <img src={imageUrl} class="absolute w-4/6 rounded-lg right-0 -z-1" />
+  </main>
+  <footer class="h-8 flex justify-between items-center">
+    <ul class="flex gap-4">
+      {
+        technologies.map((t, index) => (
+          <li class="h-8">
+            <Icon url={"Logos/" + t} class="w-[24px] h-[24px]" />
+          </li>
+        ))
+      }
+    </ul>
+    <a
+      href={`https://${url}`}
+      class="flex justify-center items-center block w-24 h-8 bg-[#8C98B7] rounded-md font-bold cursor-pointer"
+    >
+      Visitar
+    </a>
+  </footer>
+</section>
